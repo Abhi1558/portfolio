@@ -1,0 +1,42 @@
+.parallex{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    h1{
+        font-size: 90px;
+        font-weight: 600;
+    }
+    .mountains{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: bottom;
+        position: absolute;
+        z-index: 999;
+
+    }
+    .planets{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: bottom;
+        position: absolute;
+        z-index: 2;
+
+
+    }
+    .stars{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: bottom;
+        position: absolute;
+
+
+    }
+}
+
