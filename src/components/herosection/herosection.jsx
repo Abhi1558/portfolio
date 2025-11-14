@@ -32,10 +32,10 @@ const variant={
 }
 const slidingtextvariant={
     initial:{
-        x:"100%"
+        x:"200%"
     },
     animate:{
-        x:"-200%",
+        x:"-300%",
         transition:{
             duration:10,
             ease:"linear",
@@ -61,7 +61,7 @@ const Herosection=()=>{
                  animate="animate" 
                  className="text-container ">
                     <motion.h2 variants={variant}>ABHIJEET YADAV</motion.h2>
-                    <motion.h1 variants={variant}>Frontend Developer </motion.h1>
+                    <motion.h1 variants={variant}>Fullstack Developer </motion.h1>
                     <motion.div variants={variant}>
                         <motion.button variants={variant}>See The Latest Works</motion.button>
                         <motion.button variants={variant}>Contact Us</motion.button>
@@ -74,7 +74,7 @@ const Herosection=()=>{
                 animate="animate"
 
                 className="sliding-text-container">
-                     Web Designer Frontend Developer 
+                    Developer Web Designer DevOps Engineer  
                     
                 </motion.div>
                 <div className="image-container ">

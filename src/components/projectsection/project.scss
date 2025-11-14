@@ -1,19 +1,72 @@
-.projects{
-    position: relative;
-    .progress{
-        position: sticky;
-        top: 0;
-        left: 0;
-        padding-top: 50px;
-        text-align: center;
-        color: orange;
-        font-size: 46px;
-        font-weight: 900;
-        .progress-bar{
-            height: 10px;
-            background: white;
-            margin: 10px;
+.projects {
+  position: relative;
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 46px;
+    font-weight: 900;
+    .progress-bar {
+      height: 10px;
+      background: white;
+    }
+  }
+}
+.project-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+     .wrapper{
+        height: 100%;
+        width: 1000px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
 
+        .image-container{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img{
+             width: 600px;
+             height: 400px;
+          }
         }
+        .text-container{
+          overflow: hidden;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{ 
+                 width: 100%;
+                 text-align: left;
+                 font-size: 40px;
+                 font-weight: 900;
+                 padding: 20px;
+            }
+            p{
+                text-align: left;
+                font-size:20px;
+                margin: 20px;
+                color: gray;
+            }
+        }
+      }
     }
 }

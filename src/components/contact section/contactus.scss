@@ -1,0 +1,80 @@
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1366px;
+  height: 100%;
+  align-items: center;
+  margin: 200px;
+  gap: 40px;
+  .imfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 50px;
+    h1 {
+      font-size: 90px;
+      line-height: 88px;
+    }
+    .imfo-item {
+      h3 {
+        font-size: 20px;
+        font-weight: 900;
+      }
+    }
+  }
+  .form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    width: 100%;
+    .svg-icon{
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      
+      position: relative;
+      .svg-phoneimg{
+        position:absolute;
+        stroke: orange;
+        margin: auto;
+      }
+
+    }
+    
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+
+      input,textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+        width: 100%;
+        
+        
+        
+      }
+      button{
+        padding: 20px;
+        border: none;
+        cursor: pointer;
+        background-color: orange;
+        width: 100%;
+
+      }
+    }
+  }
+}
