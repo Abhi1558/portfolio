@@ -1,3 +1,4 @@
+@import "../../App.scss";
 .parallex{
     height: 100%;
     width: 100%;
@@ -9,6 +10,10 @@
     h1{
         font-size: 90px;
         font-weight: 600;
+        @include mobile{
+            font-size: 70px;
+            text-align: center;
+        }
     }
     .mountains{
         height: 100%;
@@ -17,6 +22,10 @@
         background-position: bottom;
         position: absolute;
         z-index: 999;
+        @include mobile{
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
 
     }
     .planets{
@@ -26,6 +35,10 @@
         background-position: bottom;
         position: absolute;
         z-index: 2;
+        @include mobile{
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
 
 
     }
@@ -35,6 +48,7 @@
         background-size: cover;
         background-position: bottom;
         position: absolute;
+        
 
 
     }

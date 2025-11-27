@@ -1,13 +1,13 @@
 import Links from "./Links"
 import Togglebutton from "./togglebutton"
 import { useState } from "react"
-import {delay, motion}from "framer-motion"
+import { motion}from "framer-motion"
 import "./Slider.scss"
 function Slider(){
     const[open,setopen]=useState(false)
     const variant={
         open:{
-            clipPath:"circle(1000px at 50px 50px)",
+            clipPath:"circle(1200px at 50px 50px)",
             transition:{
                 duration:2,
                 type:"spring",

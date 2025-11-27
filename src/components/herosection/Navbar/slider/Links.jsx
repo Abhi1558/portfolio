@@ -1,7 +1,7 @@
 import "./Slider.scss"
 import {motion} from "framer-motion"
 function Links(){
-    const links=["Herosection","About","Skills","Projects","Contact us"]
+    const links=["Herosection","Skills","Project","Contactus"]
     const variants={
         open:{
             transition:{
