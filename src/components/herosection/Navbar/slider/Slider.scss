@@ -1,4 +1,4 @@
-@import "../../../../App.scss";
+@use "../../../../app" as*;
 .slider{
     display: flex;
     flex-direction: column;
@@ -52,15 +52,22 @@
     
     }
     .togglebuttons{
+        background-color: brown;
         z-index: 2100;
-        width: 50px;
-        height: 50px;
-        padding-left: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: xx-large;
         position: fixed;
-        top:20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top:30px;
         left:25px;
         background-color: white;
         border-radius: 50%;
+        @include mobile{
+            top:15px
+        }
        
         
     }

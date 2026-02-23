@@ -1,11 +1,24 @@
+//service.jsx scss
+@use "../../app" as*;
+.serviceM{
+  display: none;
+  @include mobile{
+    display:block
+  }
+
+}
 .service {
-  height: 100%;
+  height: 130vh;
 
   background: linear-gradient(180deg, #0c0c1d, #111132);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include mobile{
+    display: none;
+  }
+ 
   .title-container {
     flex: 1;
     align-self: flex-end;

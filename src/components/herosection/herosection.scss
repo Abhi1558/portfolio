@@ -1,19 +1,32 @@
-@import "../../App.scss";
+@use "../../app" as*;
 
 .herosection {
     height: calc(100vh - 100px);
     background: linear-gradient(180deg, #0c0c1d, #161641);
     position: relative;
+     @include mobile {
+        display: flex;
+        flex-direction: column;
+       
+        
+        
+     }
 
+    
     .wrapper {
         max-width: 1366px;
         height: 100%;
         margin: auto;
-        padding: 100px;
+        
+        
+        
         @include mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             height: auto;
             padding: 0;
-            margin: 0;
+            margin: auto;
         }
 
         .text-container {
@@ -58,7 +71,7 @@
                     display: flex;
                     justify-content: center;
                 }
-                button {
+                a {
                     position: relative;
                     padding: 15px;
                     margin-right: 20px;
@@ -107,24 +120,28 @@
     .image-container {
         position: absolute;
         top: 0;
-        right: 0;
+        right:0;
         height: 100%;
-        width: 50%; // desktop width
+        width: 45%; 
         z-index: 1;
-
+      
+        
+       
         img {
-            width: 100%;
+            margin-left: 8%;
+            width: 80%;
             height: 100%;
             
         }
 
-        @include mobile {
-            position: relative; 
-            top: 50;             
-            right: 0;         
-            height: 50%;      
-            width: 100%;
-            margin-top: 20px;  
+        @include mobile { 
+            position:static; 
+            flex:1;
+            top: 0;         
+            right:0;         
+            height: auto;      
+            width: auto;
+            overflow: hidden;
             z-index: 1;
             
         }

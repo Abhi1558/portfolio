@@ -1,14 +1,15 @@
 import "./service.scss";
+import ServiceMobile from "./serviceMobile"
 import {
   SiReact,
   SiJavascript,
-  SiTypescript,
-  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
   SiMongodb,
   SiGithub
 } from "react-icons/si";
 import people from "../pictures/people.webp";
-import framerlogo from "../pictures/framerlogo.png"
+
 
 
 import { motion ,useInView} from "framer-motion";
@@ -48,9 +49,11 @@ const Service = () => {
     }
     
   })
-  return (
-    <motion.div ref={ref} className="service" variants={variant} initial="initial" 
-    // whileInView="animate"
+  return (<motion.div id="Skills">
+    <ServiceMobile className="serviceM"/>
+    
+    <motion.div ref={ref} className="service"  variants={variant} initial="initial" 
+    
       animate={isinview ? "animate" : "initial"}
 >
       <motion.div className="title-container" variants={variant}>
@@ -60,6 +63,7 @@ const Service = () => {
         </p>
         <hr />
       </motion.div>
+      
 
       <motion.div className="text-container" variants={variant}>
         <motion.div className="title">
@@ -94,11 +98,9 @@ const Service = () => {
         </div>
 
         <div className="skill">
-          <h2>State & Routing</h2>
+          <h2>State, Routing & Backend</h2>
           <p>
-            I manage complex application state and navigation using Redux and
-            React Router, ensuring scalable, maintainable, and organized
-            front-end architecture.
+            Manages application state, routing, and server-side logic with Node.js, Express, ensuring scalable and maintainable architecture
           </p>
         </div>
 
@@ -122,29 +124,28 @@ const Service = () => {
             <SiJavascript className="tech-image"/>
             
           </motion.div>
-          <motion.div className="tech-image-box" variants={imageVariant(4)} animate="animate" initial="initial">
-            <SiTypescript className="tech-image"/>
+          <motion.div className="tech-image-box" variants={imageVariant(3.5)} animate="animate" initial="initial">
+            <SiNodedotjs className="tech-image" style={{color:"green"}}/>
             
           </motion.div>
-          <motion.div className="tech-image-box" variants={imageVariant(6)} animate="animate" initial="initial">
-            <img  src={framerlogo} className="tech-image"/>
-            
+          <motion.div className="tech-image-box" variants={imageVariant(5)} animate="animate" initial="initial" >
+            <SiExpress className="tech-image"/>
           </motion.div>
-          <motion.div className="tech-image-box" variants={imageVariant(5)} animate="animate" initial="initial">
-            <SiTailwindcss className="tech-image"/>
-           
-          </motion.div>
+          
           <motion.div className="tech-image-box" variants={imageVariant(4)} animate="animate" initial="initial">
-            <SiMongodb className="tech-image"/>
+            <SiMongodb className="tech-image" style={{color:"green"}}/>
           </motion.div>  
           <motion.div className="tech-image-box" variants={imageVariant(3)} animate="animate" initial="initial">
-            < SiGithub  className="tech-image"/>
+            < SiGithub  className="tech-image" style={{color:"grey"}}/>
           </motion.div>        
         </motion.div>
       </motion.div>
       
       
     </motion.div>
+
+  </motion.div>
+    
   );
 };
 export default Service;

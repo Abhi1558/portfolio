@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@use "../../app" as*;
 .cursor{
     position: fixed;
     height: 50px;

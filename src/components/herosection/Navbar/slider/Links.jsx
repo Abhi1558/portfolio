@@ -21,7 +21,8 @@ function Links(){
     return(
         <motion.div className="links" variants={variants}>
            
-            {links.map((item)=><motion.a className="link" href={`#${item}`} variants={variantsitems} key={item} whileHover={{scale:1.1}} whileTap={{scale:0.95}}>{item}</motion.a>)}
+            {links.map((item)=><motion.a className="link" href={`#${item}`} variants={variantsitems} 
+            key={item} whileHover={{scale:1.1}} whileTap={{scale:0.95}}>{item}</motion.a>)}
            
 
         </motion.div>

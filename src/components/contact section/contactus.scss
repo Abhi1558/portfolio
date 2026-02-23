@@ -1,11 +1,29 @@
+@use "../../app" as*;
 .contact-us {
+ 
   display: flex;
   justify-content: space-between;
   max-width: 1366px;
   height: 100%;
+  padding-top: 100px;
   align-items: center;
   margin: 200px;
   gap: 40px;
+  @include mobile{
+    gap: 0;
+    width: 100%;
+    margin-top: 0px;
+    margin: 0px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding:5px;
+    height: auto;
+    
+
+     
+    
+  }
+
   .imfo {
     flex: 1;
     display: flex;
@@ -13,9 +31,22 @@
     justify-content: center;
 
     gap: 50px;
+    @include mobile{
+        margin-top: 30px;
+        gap:10px;
+        padding: 20px;
+        width: 100%;}
     h1 {
       font-size: 90px;
       line-height: 88px;
+      @include mobile{
+        padding-top: 20px;
+        font-size: 50px;
+        line-height: normal;
+        color: orange;
+        
+        
+  }
     }
     .imfo-item {
       h3 {
@@ -25,29 +56,37 @@
     }
   }
   .form-container {
+
+    position: relative;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    
     width: 100%;
+    @include mobile{
+      gap:10px
+    }
     .svg-icon{
       width: 100%;
       height: 100%;
       pointer-events: none;
+      display: flex;
+    
       
-      position: relative;
       .svg-phoneimg{
         position:absolute;
         stroke: orange;
         margin: auto;
+        @include mobile{
+          top: 60;
+          left: 50;
+          width: 300px;
+        }
       }
 
-    }
-    
-    
+    } 
     form {
       display: flex;
       flex-direction: column;
@@ -55,6 +94,11 @@
       align-items: center;
       gap: 20px;
       width: 100%;
+      @include mobile{
+        gap:10px;
+        width:300px
+      }
+      
 
       input,textarea {
         padding: 20px;

@@ -6,7 +6,7 @@ import "./contactus.scss";
 const Contactus = () => {
   const imfo = [
     { id: 1, contactVia: "Mail", contactImfo: "abhijeet152001@gmail.com" },
-    { id: 2, contactVia: "phone", contactImfo: "+91 8847651558" },
+    { id: 2, contactVia: "Linkedin", contactImfo: "linkedin.com/in/abhijeet-yadav-dev" },
     { id: 3, contactVia: "Address", contactImfo: "New Delhi" },
   ];
   const variant = {
@@ -59,6 +59,7 @@ const Contactus = () => {
     <motion.div
       ref={ref}
       className="contact-us"
+      id="Contactus"
       variants={variant}
       whileInView="animate"
       initial="initial"

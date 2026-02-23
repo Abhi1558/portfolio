@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./_app.scss";
 import Herosection from "./components/herosection/herosection";
 import Navbar from "./components/herosection/Navbar/navbar";
 import Parallex from "./components/parallexsection/parallex";
@@ -13,18 +13,23 @@ function App() {
       <section>
         <Navbar />
         <Herosection id="Herosection"/>
-      </section>
-      <section>
+      </section> 
+       <section>
         <Parallex type="services" />
       </section>
       <section id="service-section">
         <div id="service-wrapper">
-          <Service id="Skills"/>
+        <Service id="Skills" />
         </div>
       </section>
-      <section>
+       <section>
         <Parallex type="projects" />
       </section>
+      <Projects id="Project"/>
+      
+      <section id="contacus-section">
+        <Contactus/>
+      </section> 
       
       
     </div>

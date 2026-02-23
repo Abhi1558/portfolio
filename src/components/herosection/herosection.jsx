@@ -1,5 +1,5 @@
 import "./herosection.scss"
-import hero from "../pictures/hero.png"
+import mypic from "../pictures/mypic.png"
 import scroll from "../pictures/scroll.png"
 import { motion } from "framer-motion"
 
@@ -27,7 +27,7 @@ const slidingtextvariant = {
 
 const Herosection = () => {
     return (
-        <div className="herosection">
+        <div className="herosection" id="Herosection">
             <div className="wrapper">
                 <motion.div
                     variants={variant}
@@ -38,8 +38,8 @@ const Herosection = () => {
                     <motion.h2 variants={variant}>Fullstack Developer</motion.h2>
 
                     <motion.div variants={variant} className="button-container">
-                        <motion.button variants={variant}>See The Latest Works</motion.button>
-                        <motion.button variants={variant}>Contact Us</motion.button>
+                        <motion.a variants={variant} href="#Project" >See The Latest Works</motion.a>
+                        <motion.a variants={variant} href="#Contactus" >Contact Us</motion.a>
                     </motion.div>
 
                     <motion.img variants={variant} animate="scrollbutton" src={scroll} alt="" />
@@ -55,7 +55,7 @@ const Herosection = () => {
             </motion.div>
 
             <div className="image-container">
-                <img src={hero} alt="hero" />
+                <img src={mypic} alt="hero" />
             </div>
         </div>
     )

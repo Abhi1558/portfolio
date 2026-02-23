@@ -1,4 +1,4 @@
-@import "../../../App.scss";
+@use "../../../app" as*;
 .navbar{
     
     height: 100px;
@@ -14,11 +14,12 @@
         height: 100px;
         
         @include mobile{
+            height: 70px;
             justify-content: flex-end;
             padding: 10px;
         } 
         
-        span{
+        h1{
             font-weight: bolder;
             @include mobile{
                 display: none;

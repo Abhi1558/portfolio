@@ -1,0 +1,29 @@
+.skills-container {
+  height: 35vh;           // half viewport height
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill {
+  height: 100%;           // fill container
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}

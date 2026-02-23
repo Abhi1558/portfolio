@@ -1,31 +1,45 @@
-import "./navbar.scss"
-import{motion} from "framer-motion"
-import Slider from "./slider/slider"
-import Facebook from "../../pictures/Facebook.png"
-import Instagram from "../../pictures/instagram.png"
-import Dribbble from "../../pictures/dribbble.png"
-import Youtube from "../../pictures/youtube.png"
-function Navbar(){
+import "./navbar.scss";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
+import Slider from "./slider/slider";
 
-    return(
-        <div className="navbar">
-            <Slider/>
-            <div className="wrapper">
-                <motion.span initial={{opacity:0 ,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5 ,ease:"easeInOut"}}>
-                    AJ
-  
-                </motion.span>
-                <div className="social">
-                    <a href=""><img src={Facebook} alt="" /></a>
-                    <a href=""><img src={Instagram} alt="" /></a>
-                    <a href=""><img src={Dribbble} alt="" /></a>
-                    <a href=""><img src={Youtube} alt="" /></a>
+function Navbar() {
+  return (
+    <div className="navbar">
+      <Slider />
+      <div className="wrapper">
+        <motion.h1 
+          style={{fontSize:"xx-large"}}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+        >
+          AJ
+        </motion.h1>
+        <div className="social">
+          <a
+            href="https://github.com/Abhi1558"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub size={30} />
+          </a>
 
-                </div>
-            </div>
+          <a
+            
+            href="https://linkedin.com/in/abhijeet-yadav-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin size={30} />
+          </a>
 
-
+          <a href="#Contactus">
+            <FaEnvelope size={30} />
+          </a>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
-export default Navbar
+export default Navbar;
