@@ -1,13 +1,14 @@
-import "./serviceMobile.scss"
-import Skills from "./serviceMobileskills"
+import "./serviceMobile.scss";
+import Skills from "./serviceMobileskills";
 import {
   SiReact,
-  SiJavascript,
   SiNodedotjs,
   SiExpress,
   SiMongodb,
-  SiGithub
+  SiGithub,
+  SiDocker,
 } from "react-icons/si";
+import { FaPython } from "react-icons/fa";
 import people from "../pictures/people.webp";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -23,14 +24,14 @@ const ServiceMobile = () => {
       y: 0,
       transition: {
         staggerChildren: 0.15,
-        duration: 0.8
-      }
-    }
+        duration: 0.8,
+      },
+    },
   };
 
   const itemVariants = {
     initial: { opacity: 0, y: 40 },
-    animate: { opacity: 1, y: 0 }
+    animate: { opacity: 1, y: 0 },
   };
 
   const floatingIcon = (duration) => ({
@@ -40,9 +41,9 @@ const ServiceMobile = () => {
       transition: {
         duration,
         repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   });
 
   return (
@@ -66,25 +67,20 @@ const ServiceMobile = () => {
         <div className="title">
           <img src={people} alt="profile" />
           <h1>
-            <motion.b whileTap={{ color: "orange" }}>
-              Unique
-            </motion.b>{" "}
-            Creator
+            <motion.b whileTap={{ color: "orange" }}>Unique</motion.b> Creator
           </h1>
         </div>
 
         <div className="title">
           <h1>
-            <motion.b whileTap={{ color: "orange" }}>
-              For Your 
-            </motion.b> Business
-            
+            <motion.b whileTap={{ color: "orange" }}>For Your</motion.b>{" "}
+            Business
           </h1>
           <button>What We Do?</button>
-           <hr />
+          <hr />
         </div>
       </motion.div>
-      <Skills/>
+      <Skills />
       {/* TECHNOLOGIES */}
       <motion.div className="technologies" variants={itemVariants}>
         <h1>Technologies</h1>
@@ -94,18 +90,9 @@ const ServiceMobile = () => {
             className="tech-image-box"
             variants={floatingIcon(5)}
             animate="animate"
-            style={{color:"cyan"}}
+            style={{ color: "cyan" }}
           >
             <SiReact className="tech-image" />
-          </motion.div>
-
-          <motion.div
-            className="tech-image-box"
-            variants={floatingIcon(4)}
-            animate="animate"
-            style={{color:"yellow"}}
-          >
-            <SiJavascript className="tech-image" />
           </motion.div>
 
           <motion.div
@@ -114,6 +101,15 @@ const ServiceMobile = () => {
             animate="animate"
           >
             <SiNodedotjs className="tech-image" style={{ color: "green" }} />
+          </motion.div>
+
+          <motion.div
+            className="tech-image-box"
+            variants={floatingIcon(3.5)}
+            animate="animate"
+            initial="initial"
+          >
+            <FaPython className="tech-image" style={{color:"yellow"}}/>
           </motion.div>
 
           <motion.div
@@ -138,6 +134,15 @@ const ServiceMobile = () => {
             animate="animate"
           >
             <SiGithub className="tech-image" />
+          </motion.div>
+
+          <motion.div
+            className="tech-image-box"
+            variants={floatingIcon(3)}
+            animate="animate"
+            style={{ color: "cyan" }}
+          >
+            <SiDocker className="tech-image" />
           </motion.div>
         </div>
       </motion.div>

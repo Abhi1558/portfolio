@@ -1,29 +1,44 @@
 import portfolio from "../pictures/personal portfolio.jpeg"
-import aiproject from "../pictures/AI project.png"
-import smoothie from "../pictures/smoothie project.png"
+import InstantKart from "../pictures/InstantKart.webp"
+import FileManagement from "../pictures/FileManagement.webp"
 import wassup from "../pictures/wassup.png"
 import "./project.scss"
 import { motion ,useScroll, useSpring, useTransform } from "framer-motion"
 import { useRef } from "react"
-const ProjectList=[
-        {id:1,
-         title:"Portfolio website",
-         img: portfolio ,
-         discription:"This is my portfolio website showcasing my skills and projects.Built with React, Framer Motion and SCSS, it features smooth animations and a responsive design.Includes a dynamic scroll progress bar and interactive navigation.Provides a clean and professional experience for visitors."},
-        {id:2,
-         title:"ABH-I",
-         img: aiproject,
-         discription:"ABH-I is an AI project designed to analyze datasets efficiently.It uses machine learning algorithms to detect patterns and provide insights.Includes a user-friendly interface for inputting data and visualizing results.Demonstrates my ability to integrate AI solutions into practical applications."},
-        {id:3,
-         title:"Wssup!",
-         img: wassup,
-         discription:"Developed a real-time chat application using React and Socket.IO to enable instant bi-directional communication, with a responsive and modern user interface built using Tailwind CSS and DaisyUI. Implemented core features such as live messaging, online user presence, and typing indicators to enhance real-time user interaction. Integrated backend APIs to support user management and persistent chat history."
-        },
-        {id:4,
-         title:"Smoodis",
-         img: smoothie ,
-         discription:"Smoothies is a web app showcasing smoothie recipes with images and nutritional info.Users can browse recipes or create their own combinations.Fully responsive design optimized for desktop and mobile devices.Highlights my frontend development and UX design skills."}
-    ]
+const ProjectList = [
+{
+id: 1,
+title: "Portfolio Website",
+img: portfolio,
+discription:
+"A responsive developer portfolio built with React, Framer Motion, and SCSS to showcase my skills, projects, and experience. Features smooth animations, interactive navigation, responsive layouts, and a dynamic scroll progress indicator for an engaging user experience."
+},
+
+{
+  id: 2,
+  title: "Secure File Management & Audit System",
+  img: FileManagement,
+  discription:
+    "A secure backend application built with Python, FastAPI, and MongoDB (PyMongo) for managing files, controlling document access, and tracking user activities. Features JWT-based authentication, role-based authorization, secure file upload and download, file ownership validation, SHA-256 hashing for file integrity and duplicate detection, audit logging, and basic file version tracking. Uses filesystem storage for files and MongoDB for metadata and audit records."
+},
+
+{
+id: 3,
+title: "Wassup!",
+img: wassup,
+discription:
+"A full-stack real-time chat application built with React, Node.js, Express, MongoDB, and Socket.IO. Features a custom email verification system built from scratch, secure authentication, real-time messaging, online/offline presence, last seen, typing indicators, unread message counts, user search, image messaging, profile management, and block/unblock functionality. Integrated Cloudinary for media storage and implemented security middleware, rate limiting, and production deployment."
+},
+
+{
+  id: 4,
+  title: "Instant kart",
+  img: InstantKart,
+  discription:
+    "A full-stack grocery delivery platform built with React Native, TypeScript, Node.js, Express.js, and MongoDB. Features user authentication, grocery browsing, product search, cart management, and order processing. Designed with a scalable backend architecture, with plans to integrate real-time order tracking, Socket.IO, Google Maps, and Redis for efficient caching and location-based functionality. The application uses Docker for containerization and consistent development environments."
+}
+];
+
 const Section=({item})=>{
     const ref=useRef()
     const { scrollYProgress } = useScroll({
